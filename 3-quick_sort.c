@@ -4,7 +4,7 @@
 /**
  * swap - function that swaps the values.
  *
- * @array: pointer to the first int of the array.
+ * @first: pointer to the first int of the array.
  * @last: pointer to the last int of the array.
  *
  * Return: nothing.
@@ -18,6 +18,17 @@ void swap(int *first, int *last)
 
 }
 
+/**
+ * partition - performs Lomuto partitioning on the subarray.
+ *
+ * @array: is a pointer to the first element in the array.
+ * @size: number of elements in the array.
+ * @min: starting index of the subarray.
+ * @max: ending index of the subarray.
+ *
+ * Return: index where the pivot ends up.
+ *
+ */
 int partition(int *array, size_t size, int min, int max)
 {
 	int pivot_value, cont, value_to_swap;
@@ -46,7 +57,16 @@ int partition(int *array, size_t size, int min, int max)
 	return (value_to_swap);
 
 }
-
+/**
+ * quick_sort_recursion - recursively sorts an array quicksort.
+ *
+ * @array: is a pointer to the first element in the array.
+ * @size: number of elements in the array.
+ * @min: starting index of the subarray.                            * @max: ending index of the subarray.
+ *
+ * Return: nothing.
+ *
+ */
 void quick_sort_recursion(int *array, size_t size, int min, int max)
 {
 	int pivot;
