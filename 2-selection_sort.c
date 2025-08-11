@@ -31,13 +31,10 @@ void selection_sort(int *array, size_t size)
 			cont = cont + 1;
 		}
 
-		if (min_num != array_size)
-		{
-			tmp = array[array_size];
-			array[array_size] = array[min_num];
-			array[min_num] = tmp;
-		}
-		print_array(array, size);
+		tmp = array[array_size];
+		array[array_size] = array[min_num];
+		array[min_num] = tmp;
 		array_size = array_size + 1;
+		print_array(array, size);
 	}
 }
