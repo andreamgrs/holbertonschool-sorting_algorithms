@@ -21,13 +21,20 @@ int partition(int *array, size_t size, int min, int max)
 	{
 		if(array[cont] <= pivot_value)
 		{
-			swap(&array[value_to_swap], &array[cont]);
-			print_array(array, size);
+			if (value_to_swap != cont)
+			{
+				swap(&array[value_to_swap], &array[cont]);
+				print_array(array, size);
+			}
 			value_to_swap++;
 		}
 		cont = cont + 1;
 	}
-	swap(&array[value_to_swap], &array[max]);
+	if (value_to_swap != max)
+	{
+		swap(&array[value_to_swap], &array[max]);
+		print_array(array, size);
+	}
 	return (value_to_swap);
 
 }
