@@ -1,6 +1,15 @@
 #include "sort.h"
 #include <stdlib.h>
 
+/**
+ * swap - function that swaps the values.
+ *
+ * @array: pointer to the first int of the array.
+ * @last: pointer to the last int of the array.
+ *
+ * Return: nothing.
+ *
+ */
 void swap(int *first, int *last)
 {
 	int tmp = *first;
@@ -12,14 +21,13 @@ void swap(int *first, int *last)
 int partition(int *array, size_t size, int min, int max)
 {
 	int pivot_value, cont, value_to_swap;
-       
+
 	pivot_value = array[max];
 	value_to_swap = min;
-
 	cont = min;
 	while (cont < max)
 	{
-		if(array[cont] <= pivot_value)
+		if (array[cont] <= pivot_value)
 		{
 			if (value_to_swap != cont)
 			{
