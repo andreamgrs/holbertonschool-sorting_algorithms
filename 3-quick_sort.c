@@ -64,7 +64,7 @@ int partition(int *array, size_t size, int min, int max)
  * @size: number of elements in the array.
  * @min: starting index of the subarray.
  * @max: ending index of the subarray.
- * 
+ *
  * Return: nothing.
  *
  */
