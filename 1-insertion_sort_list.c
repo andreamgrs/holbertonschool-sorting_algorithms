@@ -13,10 +13,11 @@
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *current, *insert_node, *before_node, *after_node, *next_node;
+
 	if (*list == NULL || list == NULL || (*list)->next == NULL)
 	{
 		return;
-	}	
+	}
 
 	current = (*list)->next;
 
@@ -40,7 +41,7 @@ void insertion_sort_list(listint_t **list)
 			insert_node->next = before_node;
 			if (before_node->prev != NULL)
 			{
-				before_node->prev->next = insert_node; 
+				before_node->prev->next = insert_node;
 			}
 			else
 			{
